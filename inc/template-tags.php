@@ -72,7 +72,7 @@ function karta_background_image_url( $post_id = null ) {
 
 	if ( has_post_thumbnail() ) {
 		$thumb_id = get_post_thumbnail_id();
-		$thumb_url_array = wp_get_attachment_image_src( $thumb_id, 'thumbnail-size', true );
+		$thumb_url_array = wp_get_attachment_image_src( $thumb_id, 'large', true );
 		$thumb_url = $thumb_url_array[0];
 		echo esc_attr( "style=background-image:url(".esc_url($thumb_url).")" );
 	}
